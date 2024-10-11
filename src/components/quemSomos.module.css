@@ -1,0 +1,83 @@
+.quemsomos_texto {
+  color: white;
+  font-size: 2vw; /* Ajuste inicial para desktop */
+  width: 80vw;
+  text-align: center;
+}
+
+.App_header {
+  position: relative;
+  background-image: url('https://file.garden/Zrztbf_gFlhq3e_y/skymusic/estudio.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App_header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.header_nomesite, .quemsomos_texto, .logo {
+  position: relative;
+  z-index: 2;
+}
+
+.header_nomesite {
+  color: white;
+  font-size: 6vw; /* Menor para telas grandes */
+  font-weight: bold;
+  margin: 0px;
+  text-align: center;
+}
+
+.logo {
+  height: 10vw; /* Redução no tamanho da logo */
+  width: 10vw;
+  max-width: 120px;
+  max-height: 120px;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  .App_header {
+    padding: 10px;
+  }
+  .header_nomesite {
+    font-size: 10vw; /* Ajuste proporcional */
+  }
+  .quemsomos_texto {
+    font-size: 3.5vw; /* Levemente maior para manter legibilidade */
+  }
+  .logo {
+    height: 15vw;
+    width: 15vw;
+  }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 576px) {
+  .header_nomesite {
+    font-size: 12vw; /* Ajuste maior para maior legibilidade */
+  }
+  .quemsomos_texto {
+    font-size: 4.5vw; /* Um pouco menor para telas pequenas */
+  }
+  .logo {
+    height: 20vw;
+    width: 20vw;
+  }
+}

@@ -1,0 +1,80 @@
+.header_slogan{
+  color: white;
+  font-size: 1.5vw;
+  font-style: italic;
+  font-weight: bold;
+}
+.App_header {
+  position: relative;
+  background-image: url('https://file.garden/Zrztbf_gFlhq3e_y/skymusic/background.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App_header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+  z-index: 1; /* Fica abaixo do conteúdo */
+}
+
+.header_nomesite, .header_slogan, .logo {
+  position: relative;
+  z-index: 2; /* Garante que o texto e a logo fiquem acima do overlay */
+}
+
+.header_nomesite {
+  color: white;
+  font-size: 8vw;
+  font-weight: bold;
+  margin: 0px;
+  text-align: center;
+}
+
+.logo {
+  height: 15vw;
+  width: 15vw;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+@media (max-width: 768px) {
+  .App_header {
+    padding: 10px;
+  }
+  .header_nomesite {
+    font-size: 15vw;
+  }
+  .header_slogan{
+    font-size: 3vw;
+  }
+  .logo {
+    height: 20vw;
+    width: 20vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .header_nomesite {
+    font-size: 15vw;
+  }
+  .logo {
+    height: 25vw;
+    width: 25vw;
+  }
+  .header_slogan{
+    font-size: 5vw;
+  }
+}
